@@ -32,7 +32,7 @@ class KeypointDataset(Dataset):
         if image.shape[2] == 4:
             image = image[:, :, 0:3]  # Removing alpha channel
 
-        key_pts = self.key_pts_frame.iloc[index, 1:].as_matrix()
+        key_pts = self.key_pts_frame.iloc[index, 1:].to_numpy()
         key_pts = key_pts.astype('float').reshape(-1, 2)
         sample = {'image': image, 'keypoints': key_pts}
 

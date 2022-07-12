@@ -8,7 +8,7 @@ import matplotlib.image as mpimg
 import cv2
 
 # importing functions 
-from visualizer import display_stats, show_keypoints
+from module_utils import display_stats, show_keypoints
 from dataset import *
 
 # Define path to CSV file
