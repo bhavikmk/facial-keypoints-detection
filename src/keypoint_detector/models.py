@@ -76,8 +76,6 @@ class Net(nn.Module):
         x = self.fc2(x)
         x = F.relu(x)
         x = self.drop1(x)
-        
+  
         x = self.fc3(x)
-        
-        # a modified x, having gone through all the layers of your model, should be returned
         return x
